@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Business Directory - Deployment Guide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8fafc;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .section h2 {
+            color: #2563eb;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        .section h3 {
+            color: #374151;
+            font-size: 1.3rem;
+            margin: 20px 0 10px 0;
+        }
+        
+        .step {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 4px solid #2563eb;
+        }
+        
+        .step-number {
+            background: #2563eb;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 15px;
+        }
+        
+        .code {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        .warning {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        .success {
+            background: #d1fae5;
+            border: 1px solid #10b981;
+            padding: 15px;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        
+        .checklist {
+            list-style: none;
+        }
+        
+        .checklist li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .checklist li:before {
+            content: "☐";
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+            color: #6b7280;
+        }
+        
+        .file-structure {
+            background: #f8fafc;
+            border: 1px solid #e5e7eb;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: monospace;
+            margin: 10px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            margin: 10px 10px 10px 0;
+        }
+        
+        .btn:hover {
+            background: #1d4ed8;
+        }
+        
+        .btn-secondary {
+            background: #6b7280;
+        }
+        
+        .btn-secondary:hover {
+            background: #4b5563;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌐 Global Business Directory</h1>
+            <p>Complete Deployment Guide for Hostinger Hosting</p>
+        </div>
+
+        <div class="section">
+            <h2>📦 Step 1: Export Your Project</h2>
+            
+            <h3>Method A: Download from Blink (Recommended)</h3>
+            <div class="step">
+                <span class="step-number">1</span>
+                Go to <a href="https://blink.new" target="_blank">blink.new</a> and sign in to your account
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                Open your "Global Business Directory Platform" project
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                Click the <strong>"Download Code"</strong> button in the top navigation
+            </div>
+            <div class="step">
+                <span class="step-number">4</span>
+                Extract the downloaded ZIP file to your computer
+            </div>
+
+            <h3>Method B: Build from Source</h3>
+            <div class="code">
+# Navigate to your project folder
+cd global-business-directory-ju3clqoy
+
+# Install dependencies
+npm install
+
+# Build for production
+npm run build
+            </div>
+            
+            <div class="success">
+                ✅ After building, you'll have a <strong>dist/</strong> folder containing all the files needed for deployment.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🌐 Step 2: Deploy to Hostinger</h2>
+            
+            <h3>Access Hostinger Control Panel</h3>
+            <div class="step">
+                <span class="step-number">1</span>
+                Log in to your Hostinger account at <a href="https://hostinger.com" target="_blank">hostinger.com</a>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                Go to your hosting control panel (hPanel)
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                Click on <strong>"File Manager"</strong>
+            </div>
+            <div class="step">
+                <span class="step-number">4</span>
+                Navigate to your domain's <strong>public_html</strong> folder
+            </div>
+
+            <h3>Upload Your Files</h3>
+            <div class="step">
+                <span class="step-number">5</span>
+                Delete any existing files in the public_html folder (if this is a new domain)
+            </div>
+            <div class="step">
+                <span class="step-number">6</span>
+                Upload <strong>ALL</strong> contents from your <strong>dist/</strong> folder to public_html
+            </div>
+            
+            <div class="warning">
+                ⚠️ <strong>Important:</strong> Upload the contents OF the dist folder, not the dist folder itself!
+            </div>
+
+            <h3>Verify File Structure</h3>
+            <p>Your public_html should look like this:</p>
+            <div class="file-structure">
+public_html/
+├── index.html
+├── assets/
+│   ├── index-[hash].js
+│   ├── index-[hash].css
+│   └── [other asset files]
+├── favicon.svg
+├── _redirects
+└── vite.svg
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>⚙️ Step 3: Configure URL Routing</h2>
+            
+            <p>Since this is a Single Page Application (SPA), you need to configure URL rewriting:</p>
+            
+            <div class="step">
+                <span class="step-number">1</span>
+                In your public_html folder, create a new file called <strong>.htaccess</strong>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                Add this content to the .htaccess file:
+            </div>
+            
+            <div class="code">
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
+            </div>
+            
+            <div class="step">
+                <span class="step-number">3</span>
+                Save the file and ensure it's in the root of public_html
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🔒 Step 4: Enable HTTPS</h2>
+            
+            <div class="step">
+                <span class="step-number">1</span>
+                In your Hostinger control panel, go to <strong>"SSL"</strong>
+            </div>
+            <div class="step">
+                <span class="step-number">2</span>
+                Enable <strong>"Force HTTPS"</strong>
+            </div>
+            <div class="step">
+                <span class="step-number">3</span>
+                Wait 5-10 minutes for the SSL certificate to activate
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>✅ Step 5: Test Your Deployment</h2>
+            
+            <h3>Verification Checklist</h3>
+            <ul class="checklist">
+                <li>Website loads correctly at your domain</li>
+                <li>Search functionality works</li>
+                <li>Navigation menu functions properly</li>
+                <li>Pages load without 404 errors</li>
+                <li>Mobile responsive design works</li>
+                <li>HTTPS is enabled (green lock icon)</li>
+                <li>No console errors in browser developer tools</li>
+            </ul>
+            
+            <div class="success">
+                🎉 <strong>Congratulations!</strong> Your Global Business Directory Platform is now live!
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>🆘 Troubleshooting</h2>
+            
+            <h3>Common Issues & Solutions</h3>
+            
+            <div class="warning">
+                <strong>Issue:</strong> Blank page or loading screen<br>
+                <strong>Solution:</strong> Check browser console for errors, verify all files uploaded correctly, ensure proper file permissions (644 for files, 755 for folders)
+            </div>
+            
+            <div class="warning">
+                <strong>Issue:</strong> 404 errors when refreshing pages<br>
+                <strong>Solution:</strong> Ensure .htaccess file is created with the URL rewriting rules above
+            </div>
+            
+            <div class="warning">
+                <strong>Issue:</strong> Slow loading times<br>
+                <strong>Solution:</strong> Enable Hostinger CDN in your control panel, optimize images, check server location
+            </div>
+            
+            <h3>Get Help</h3>
+            <a href="#" class="btn">Hostinger 24/7 Support</a>
+            <a href="mailto:support@blink.new" class="btn btn-secondary">Blink Support</a>
+        </div>
+
+        <div class="section">
+            <h2>📚 Additional Resources</h2>
+            
+            <p>For more detailed information, check these files in your project:</p>
+            <ul>
+                <li><strong>INSTALLATION_GUIDE.md</strong> - Comprehensive setup instructions</li>
+                <li><strong>DEPLOYMENT_CHECKLIST.md</strong> - Step-by-step verification guide</li>
+                <li><strong>README.md</strong> - Project overview and quick start</li>
+                <li><strong>QUICK_DEPLOY_GUIDE.md</strong> - 5-minute deployment summary</li>
+            </ul>
+            
+            <div class="success">
+                <strong>Pro Tip:</strong> Bookmark this guide for future deployments and updates!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add click functionality to checklist items
+        document.querySelectorAll('.checklist li').forEach(item => {
+            item.addEventListener('click', function() {
+                if (this.style.textDecoration === 'line-through') {
+                    this.style.textDecoration = 'none';
+                    this.style.opacity = '1';
+                    this.querySelector('::before') ? this.style.setProperty('--check', '☐') : null;
+                } else {
+                    this.style.textDecoration = 'line-through';
+                    this.style.opacity = '0.6';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
